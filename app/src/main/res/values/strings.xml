@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KotlinProje05</string>
+    <string name="app_title">Gezegende Kaç Kilosun</string>
+    <string name="enterWeightHint">Dünyadaki Kilon Nedir ?</string>
+    <string name="btnCalcText">Hesapla</string>
+    <string name="txtResult">Sonuc</string>
+</resources>
