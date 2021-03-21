@@ -4,4 +4,7 @@
     <string name="enterWeightHint">Dünyadaki Kilon Nedir ?</string>
     <string name="btnCalcText">Hesapla</string>
     <string name="txtResult">Sonuc</string>
+    <string name="onMarsText">Mars</string>
+    <string name="onVenusText">Venüs</string>
+    <string name="onJupiterText">Jüpiter</string>
 </resources>

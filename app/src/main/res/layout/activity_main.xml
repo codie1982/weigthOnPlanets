@@ -10,14 +10,14 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="@string/app_title"
         android:typeface="monospace"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imgTitle" />
 
     <EditText
         android:id="@+id/txtWeight"
@@ -27,37 +27,76 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:autofillHints=""
+        android:background="@drawable/edittext_background"
         android:ems="10"
+        android:fontFamily="monospace"
         android:hint="@string/enterWeightHint"
         android:inputType="text"
         android:textColor="@android:color/holo_orange_dark"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
-
-    <Button
-        android:id="@+id/btnCalc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@android:color/holo_orange_dark"
-        android:text="@string/btnCalcText"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="@+id/txtWeight"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtWeight"
-        app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
 
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:fontFamily="monospace"
         android:text="@string/txtResult"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="@+id/txtWeight"
         app:layout_constraintStart_toStartOf="@+id/txtWeight"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalc" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWeight" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        app:layout_goneMarginRight="10dp">
+
+        <RadioButton
+            android:id="@+id/rdyMars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:checked="true"
+            android:onClick="handleChangePlanet"
+            android:text="@string/onMarsText" />
+
+        <RadioButton
+            android:id="@+id/rdyVenus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="handleChangePlanet"
+            android:text="@string/onVenusText" />
+
+        <RadioButton
+            android:id="@+id/rdyJupiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:onClick="handleChangePlanet"
+            android:text="@string/onJupiterText" />
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        style=""
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
